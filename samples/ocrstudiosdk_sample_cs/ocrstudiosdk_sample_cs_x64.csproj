@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <DefineConstants>_WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{BCDC5FF6-3EF0-4D7F-B2CE-952CBB0F5424}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ocrstudiosdk_sample_cs</RootNamespace>
+    <AssemblyName>ocrstudiosdk_sample_cs</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OcrStudioSdkSampleCs.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\csocrstudiosdk.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\csocrstudiosdkPINVOKE.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKDelegate.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKException.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKImage.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKProcessingConfig.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKInstance.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKItem.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKItemIterator.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKPixelFormat.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKResult.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKSession.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKString.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKTarget.cs" />
+    <Compile Include="..\..\bindings\csharp\csocrstudiosdk\OCRStudioSDKYUVFormat.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
